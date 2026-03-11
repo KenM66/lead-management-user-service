@@ -1,7 +1,7 @@
-package com.users.service;
+package com.registration.service;
 
-import com.users.model.User;
-import com.users.repository.UserRepository;
+import com.registration.model.User;
+import com.registration.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;

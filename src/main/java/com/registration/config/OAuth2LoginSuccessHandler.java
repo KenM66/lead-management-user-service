@@ -1,6 +1,6 @@
-package com.users.config;
+package com.registration.config;
 
-import com.users.service.UserService;
+import com.registration.service.UserService;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;

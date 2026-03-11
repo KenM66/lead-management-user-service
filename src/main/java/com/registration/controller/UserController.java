@@ -1,7 +1,7 @@
-package com.users.controller;
+package com.registration.controller;
 
-import com.users.model.User;
-import com.users.service.UserService;
+import com.registration.model.User;
+import com.registration.service.UserService;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.web.bind.annotation.*;

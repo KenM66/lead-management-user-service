@@ -1,6 +1,6 @@
-package com.users.repository;
+package com.registration.repository;
 
-import com.users.model.User;
+import com.registration.model.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import java.util.Optional;
 

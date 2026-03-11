@@ -1,4 +1,4 @@
-package com.users.model;
+package com.registration.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

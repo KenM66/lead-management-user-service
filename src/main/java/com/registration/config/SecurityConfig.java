@@ -1,4 +1,4 @@
-package com.users.config;
+package com.registration.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
