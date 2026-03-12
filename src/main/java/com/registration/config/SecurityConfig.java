@@ -2,30 +2,23 @@ package com.registration.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 public class SecurityConfig {
 
-    private final OAuth2LoginSuccessHandler successHandler;
-
-    public SecurityConfig(OAuth2LoginSuccessHandler successHandler) {
-        this.successHandler = successHandler;
-    }
-
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+    SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
 
         http
+                .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/", "/login").permitAll()
+                        .requestMatchers("/api/users/dev-register").permitAll()
                         .anyRequest().authenticated()
                 )
-                .oauth2Login(oauth -> oauth
-                        .successHandler(successHandler)
-                )
-                .logout(logout -> logout.logoutSuccessUrl("/"));
+                .oauth2Login(Customizer.withDefaults());
 
         return http.build();
     }

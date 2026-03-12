@@ -33,4 +33,9 @@ public class UserController {
         String email = oauthUser.getAttribute("email");
         return service.updateAdditionalDetails(email, updatedUser);
     }
+    // DEV ONLY endpoint for Postman testing
+    @PostMapping("/dev-register")
+    public User registerUser(@RequestBody User user) {
+        return service.registerOrUpdateUser(user);
+    }
 }
